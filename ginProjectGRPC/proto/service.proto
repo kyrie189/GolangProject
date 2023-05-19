@@ -1,0 +1,26 @@
+syntax = "proto3";
+option go_package = "./service";
+
+service Greeter{
+    rpc Lucky(LuckyReq) returns (LuckyRes);
+}
+message LuckyReq{
+    int32 id =1;
+}
+
+message LuckyRes{
+    
+}
+
+/*message User{
+    int32 Id=1;
+    int32 Number=2;
+    int32 GiftNumber=3;
+    int32 GiftId=4;
+}
+
+message Gift{
+    int32 Id=1; 
+    int32 LeftNum =2;
+}*/
+//protoc --go_out=plugins=grpc:./ *.proto
